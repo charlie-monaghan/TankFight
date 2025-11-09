@@ -80,10 +80,13 @@ public class playerInput : MonoBehaviour
 
     void Update()
     {
+        GetFire();
+    }
+
+    void FixedUpdate()
+    {
         GetBodyMovement();
 
         GetTurretMovement();
-
-        GetFire();
     }
 }

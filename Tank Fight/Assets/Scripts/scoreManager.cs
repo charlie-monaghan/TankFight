@@ -27,7 +27,25 @@ public class scoreManager : MonoBehaviour
 
     }
 
-    void Update()
+    //void Update()
+    //{
+    //    if (player1 == null)
+    //    {
+    //        p2Score++;
+    //        UpdateScore(player2, p2Text, p2Score);
+    //        RespawnPlayers();
+
+    //    }
+    //    else if (player2 == null)
+    //    {
+    //        p1Score++;
+    //        UpdateScore(player1, p1Text, p1Score);
+    //        RespawnPlayers();
+
+    //    }
+    //}
+
+    private void FixedUpdate()
     {
         if (player1 == null)
         {

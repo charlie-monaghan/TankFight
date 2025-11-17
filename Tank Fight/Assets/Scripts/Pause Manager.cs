@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
     void Start()
     {
         isPaused = false;
+        Time.timeScale = 1f;
     }
 
     private void Update()

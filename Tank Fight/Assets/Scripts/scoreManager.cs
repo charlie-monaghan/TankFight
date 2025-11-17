@@ -18,6 +18,8 @@ public class scoreManager : MonoBehaviour
     private int p1Score = 0;
     private int p2Score = 0;
 
+    public static event System.Action OnRoundEnd;
+
     void Start()
     {
         if(player1 == null || player2 == null)
@@ -66,6 +68,7 @@ public class scoreManager : MonoBehaviour
     private void UpdateScore(GameObject winner, TMP_Text winnerText, int winnerScore)
     {
         winnerText.text = winnerScore.ToString();
+        OnRoundEnd?.Invoke();
         Destroy(winner);
     }
 
